@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_10_27_033414) do
   end
 
   create_table "prototypes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title", default: "", null: false
+    t.string "title", null: false
     t.text "catch_copy", null: false
     t.text "concept", null: false
     t.bigint "user_id"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_10_27_033414) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "name", default: "", null: false
+    t.string "name", null: false
     t.text "profile", null: false
     t.text "occupation", null: false
     t.text "position", null: false
